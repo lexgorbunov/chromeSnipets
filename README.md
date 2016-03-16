@@ -1,6 +1,7 @@
 # Google Chrome Snippets
 
-use with [Custom JavaScript](https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija) extension
+use with [Custom JavaScript](https://chrome.google.com/webstore/detail/custom-javascript-for-web/poakhlngfciodnhlhhgnaaelnpjljija) extension for chrome
+or **Custom style script** extension for FireFox
 
 ## How to use
 

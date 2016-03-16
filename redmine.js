@@ -3,7 +3,7 @@
   selectVal = function(selector, text){
     var $el = $(selector).eq(0);
     if ($el.length) {
-      var optionId = $el.find('option').filter(function(i, el){ return el.innerText == text}).val();
+      var optionId = $el.find('option').filter(function(i, el){ return el.textContent == text}).val();
       $el.val(optionId)
     }
   };
