@@ -28,7 +28,7 @@
     };
 
     // Handlers
-    onFillTaskCompleteClick = function() {
+    onCreateRequestClick = function() {
       // Открываем форму редактирования
       showAndScrollTo("update", "issue_notes");
 
@@ -42,22 +42,11 @@
     };
 
     // UI
-    $btnFillTaskComplete = $('<li><a href="javascript:void(0)" class="run-custom-js--fill-task-completed">Заполнить (Задача решена)</a></li>');
-    console.log($('#main-menu ul').length);
-    if ($('#main-menu ul').length) {
-      $('#main-menu ul').append($btnFillTaskComplete);
+    $btnCreateRequest = $('<div class="btn dtn-default run-custom-js--create-request" style="margin-left: 20px;">Заполнить форму</div>');
+    if ($('.page_title').length) {
+      $('.page_title').append($btnCreateRequest);
     }
-    $(document).on('click', '.run-custom-js--fill-task-completed', onFillTaskCompleteClick);
-    $(document).on('keyup', '#time_entry_hours', function(e) {
-      val = parseFloat((e.currentTarget.value || '').replace(/,/g, '.')) || 0;
-      spentTime = parseFloat($('td.spent-time').text()) || 0;
-      summary = spentTime + val;
-      $estimate = $('#issue_estimated_hours');
-      oldEstimateVal = parseFloat($('td.estimated-hours').text()) || 0
-      if ($estimate.length) {
-        $estimate.val(oldEstimateVal < summary ? summary : oldEstimateVal);
-      }
-    });
+    $(document).on('click', '.run-custom-js--create-request', onCreateRequestClick);
   }
 
   checkLoaded() ? main() : window.addEventListener('load', main);
